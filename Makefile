@@ -8,29 +8,8 @@ STATIC_NAMESPACES = \
 	Gio-2.0			\
 	GObject-2.0		\
 
-GENERATED_NAMESPACES = \
-	cairo-1.0		\
-	Pango-1.0		\
-	PangoCairo-1.0		\
-	Gtk-3.0			\
-	Gdk-3.0			\
-	GdkX11-3.0		\
-	GdkPixbuf-2.0		\
-	Cogl-1.0		\
-	CoglPango-1.0		\
-	Clutter-1.0		\
-	GtkClutter-1.0		\
-	GtkSource-3.0		\
-	WebKit2-3.0		\
-	Atk-1.0			\
-	Gst-1.0			\
-	Soup-2.4		\
-	TelepathyGLib-0.12	\
-	Gcr-3			\
-	Gck-1			\
-	Secret-1		\
-	Notify-0.7		\
-	GWeather-3.0
+AVAILABLE_NAMESPACES = $(wildcard $(girdir)/*)
+GENERATED_NAMESPACES = $(basename $(notdir $(AVAILABLE_NAMESPACES)))
 
 NAMESPACES = $(STATIC_NAMESPACES) $(GENERATED_NAMESPACES)
 
